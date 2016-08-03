@@ -1,30 +1,72 @@
 <html>
-<head></head>
+<head>
+	<link rel="stylesheet" type="text/css" href="../assets/styles/global.css">
+</head>
 <body>
 		<?php echo validation_errors(); ?>
 
 		<?php echo form_open('home'); ?>
-			Username: <br>
-			<input name="username" type="text"> <br>
-			Password: <br>
-			<input name="password" type="password"> <br>
-			Confirm Password: <br>
-			<input name="confpassword" type="password"> <br>
-			First Name: <br>
-			<input name="firstname" type="text"> <br>
-			Last Name: <br>
-			<input name="lastname" type="text"> <br>
-			E-mail Address: <br>
-			<input name="email" type="text"> <br>
-			Date of Birth: <br>
-			<input name="birthday" type="date"> <br>
-			Sex: <br>
-			<select name="sex">
-				<option name="m">Male</option>
-				<option name="f">Female</option>
-			</select> <br>
-
-			<div><input type="submit" value="Submit" /></div>
+		<nav>
+			<div class="nav-container">
+				<div class="col">
+					ClinicAll
+				</div>
+			</div>
+		</nav>
+		<div class="hidden-container">
+		<div class="card">
+			<div class="card-title">
+				Personal Information
+			</div>
+			<div class="card-content">
+			<form>
+			<div class="row">
+				<div class="col leftmost">
+					<label>First Name: </label>
+					<input name="firstname" type="text"> 
+				</div>
+				<div class="col rightmost">
+					<label>Last Name: </label>
+					<input name="lastname" type="text"> 
+				</div>
+			</div>
+			<div class="row">
+				<label>Username: </label>
+				<input name="username" type="text"> 
+			</div>
+			<div class="row">
+				<div class="col leftmost">
+					<label>Password: </label>
+					<input name="password" type="password"> 
+				</div>
+				<div class="col rightmost">
+					<label>Confirm Password: </label>
+					<input name="confpassword" type="password"> 
+				</div>
+			</div>
+			<div class="row">
+				<div class="col leftmost">
+					<label>E-mail Address: </label>
+					<input name="email" type="text"> 
+				</div>
+				<div class="col rightmost">
+					<label>Date of Birth: </label>
+					<input name="birthday" type="date"> 
+				</div>
+				<div class="col rightmost">
+					<label>Sex: </label>
+					<select name="sex">
+						<option name="m">Male</option>
+						<option name="f">Female</option>
+					</select> 
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="right-align">
+			<input type="submit" class="global-button animate btn" value="SUBMIT" />
+		</div>
 		</form>
+	</div>
 </body>
 </html>
