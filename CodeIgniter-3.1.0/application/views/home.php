@@ -23,42 +23,42 @@
 			<div class="row">
 				<div class="col leftmost">
 					<label>First Name: </label>
-					<input name="firstname" type="text"> 
+					<input name="firstname" type="text">
 				</div>
 				<div class="col rightmost">
 					<label>Last Name: </label>
-					<input name="lastname" type="text"> 
+					<input name="lastname" type="text">
 				</div>
 			</div>
 			<div class="row">
 				<label>Username: </label>
-				<input name="username" type="text"> 
+				<input name="username" type="text">
 			</div>
 			<div class="row">
 				<div class="col leftmost">
 					<label>Password: </label>
-					<input name="password" type="password"> 
+					<input name="password" type="password">
 				</div>
 				<div class="col rightmost">
 					<label>Confirm Password: </label>
-					<input name="confpassword" type="password"> 
+					<input name="confpassword" type="password">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col leftmost">
 					<label>E-mail Address: </label>
-					<input name="email" type="text"> 
+					<input name="email" type="text">
 				</div>
 				<div class="col rightmost">
 					<label>Date of Birth: </label>
-					<input name="birthday" type="date"> 
+					<input name="birthday" type="date">
 				</div>
 				<div class="col rightmost">
 					<label>Sex: </label>
 					<select name="sex">
 						<option name="m">Male</option>
 						<option name="f">Female</option>
-					</select> 
+					</select>
 				</div>
 			</div>
 			</div>
