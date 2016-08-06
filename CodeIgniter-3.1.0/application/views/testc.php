@@ -1,0 +1,5 @@
+<html>
+
+CLINIC
+<?=id?>
+</html>
