@@ -84,7 +84,6 @@ class Home extends CI_Controller{
                 $this->input->set_cookie($cookie);
                 $this->load->view('test', array('id' => $user_id));
             }
-         //   $this->load->view('login');
         }
 
 	}
