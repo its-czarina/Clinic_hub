@@ -4,6 +4,12 @@
         <?php echo validation_errors(); ?>
 
         <?php echo form_open('history'); ?>
+            What is your blood type? <br>
+            <input type="text" name="bloodtype"><br>
+            Height in centimeters: <br>
+            <input type="text" name="height"><br>
+            Weight in kg: <br>
+            <input type="text" name="weight"><br>
             Do you have a physician? <br>
             <select name="hasphysician">
                 <option selected="true">Yes</option>
