@@ -88,7 +88,7 @@ class Clinic extends CI_Controller{
     
     public function logout(){
         $cookie = array(
-            'name'   => 'user',
+            'name'   => 'clinic',
             'value'  => NULL,
             'path'   => '/',
         );
@@ -107,9 +107,53 @@ class Clinic extends CI_Controller{
         }
         else{
             $this->load->view('empty', $data);       
-        }
+        }   
+    }
 
-        
+    public function appointments($id = NULL){
+        if ($id === NULL)
+        {
+            $this->load->view('empty');
+            //display all appointments all days
+        }
+        else
+        {
+            $this->load->view('empty');
+            //display appointments in specified id
+        }
+    }
+
+    public function add_doctor(){
+        $this->load->helper(array('form', 'url'));
+
+        $this->load->library('form_validation');
+        //field name, human name, rules
+        $this->form_validation->set_rules('firstname','First Name','required');
+        $this->form_validation->set_rules('lastname','Last Name','required');
+        $this->form_validation->set_rules('email','Email Address','required');
+        $this->form_validation->set_rules('specialization','specialization','required');
+
+        $this->form_validation->set_rules('consultationstart','Consultation Start','required');
+        $this->form_validation->set_rules('consultationend','Consultation End','required');
+
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->load->view('doctor');
+        }
+        else
+        {
+            $data = array(
+                'clinic_id' => get_cookie('clinic'),
+                'name' => $this->input->post('firstname')." ".$this->input->post('lastname'),
+                'specialization' => $this->input->post('specialization'),
+                'email' => $this->input->post('email'),
+                'consultation_start' => $this->input->post('consultationstart'),
+                'consultation_end' => $this->input->post('consultationend')
+            );
+
+            $this->db->insert('doctor', $data);
+            redirect('clinic/update_doctor');
+        }
     }
 
 }

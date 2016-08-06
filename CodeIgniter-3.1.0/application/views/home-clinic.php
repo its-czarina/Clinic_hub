@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Welcome to ClinicAll!</h1>
 
 	<div>
-		<a href="clinic/update_doctor">UPDATE DOCTORS INFORMATION</a><br>
+		<a href="update_doctor">UPDATE DOCTORS INFORMATION</a><br>
 		<a href="appointments">CHECK APPOINTMENTS</a><br>
 		<a href="revenue">CHECK YOUR REVENUE</a><br>
 		<a href="patients">VIEW YOUR PATIENTS</a><br>

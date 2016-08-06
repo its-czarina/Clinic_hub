@@ -1,11 +1,11 @@
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../assets/styles/global.css">
+    <link rel="stylesheet" type="css" href="/xampp/htdocs/CAll/CodeIgniter-3.1.0/application/assets/styles/global.css">
 </head>
 <body>
         <?php echo validation_errors(); ?>
 
-        <?php echo form_open('doctor'); ?>
+        <?php echo form_open('clinic/add_doctor'); ?>
         <nav>
             <div class="nav-container">
                 <div class="col">
@@ -40,16 +40,7 @@
                     <input name="email" type="text">
                 </div>
             </div>
-            <div class="row">
-                <div class="col leftmost">
-                    <label>Clinic: </label>
-                    <input name="clinic" type="text">
-                </div>
-                <div class="col rightmost">
-                    <label>Clinic Address: </label>
-                    <input name="address" type="text">
-                </div>
-            </div>
+
             <div class="row">
                 <div class="col leftmost">
                     <label>Consultation Start: </label> <br> <br>
@@ -60,6 +51,7 @@
                     <input name="consultationend" type="time">
                 </div>
             </div>
+
             </div>
         </div>
         <div class="right-align">

@@ -99,7 +99,7 @@ class Home extends CI_Controller{
         $this->load->library('form_validation');
         //field name, human name, rules
         $this->form_validation->set_rules('date','Date','required');
-        $this->form_validation->set_rules('query','Query','required');
+        $this->form_validation->set_rules('address','Address','required');
         $this->form_validation->set_rules('contactnum','Contact Number','required');
         $this->form_validation->set_rules('email','E-mail Address','required');
         $this->form_validation->set_rules('username','Username','required');
@@ -127,14 +127,9 @@ class Home extends CI_Controller{
         
             $this->load->library('form_validation');
             //field name, human name, rules
-            $this->form_validation->set_rules('username', 'Username', 'required');
-            $this->form_validation->set_rules('password', 'Password', 'required');
-            $this->form_validation->set_rules('confpassword', 'Confirm Password', 'required');
-            $this->form_validation->set_rules('firstname', 'First Name', 'required');
-            $this->form_validation->set_rules('lastname', 'Last Name', 'required');
-            $this->form_validation->set_rules('email', 'Email', 'required');
-            $this->form_validation->set_rules('birthday', 'Birthday', 'required');
-            $this->form_validation->set_rules('sex', 'Sex', 'required');
+            $this->form_validation->set_rules('hasphysician','has physician','required');
+            $this->form_validation->set_rules('lastcheckup','last checkup','required');
+            $this->form_validation->set_rules('havehospitalized','have hospilazied','required');
 
             if ($this->form_validation->run() == FALSE)
             {
@@ -142,9 +137,15 @@ class Home extends CI_Controller{
             }
             else
             {
-                $data = array(
-                    'username' => $this->input->post('username'),
-                    'password' => $this->input->post('password')
+                $data = array(  
+                    'hasphysician' => $this->input->post('hasphysician'),
+                    'lastcheckup'=> $this->input->post('lastcheckup'),
+                    'doessmoke'=> $this->input->post('doessmoke'),
+                    'havehospitalized'=> $this->input->post('havehospitalized'),
+                    'hasreactions'=> $this->input->post('hasreactions'),
+                    'takingmedication'=> $this->input->post('takingmedication'),
+                    'chestpains'=> $this->input->post('chestpains'),
+                    'injurysurgery'=> $this->input->post('injurysurgery'),
                 );
 
                 $this->db->insert('login', $data);
