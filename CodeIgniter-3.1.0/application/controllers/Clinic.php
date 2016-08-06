@@ -63,7 +63,6 @@ class Clinic extends CI_Controller{
         $this->form_validation->set_rules('password','Password','required');
         $this->form_validation->set_rules('confpassword','Confirm Password','required');
 
-
         if ($this->form_validation->run() == FALSE)
         {
             $this->load->view('clinic/registration');

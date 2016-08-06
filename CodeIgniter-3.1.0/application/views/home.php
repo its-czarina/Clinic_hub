@@ -69,10 +69,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="right-align">
-			<input type="submit" class="global-button animate btn" value="SUBMIT" />
-		</div>
+		
 		</form>
+	</div>
+	<div class="right-align">
+		<input type="submit" class="global-button animate btn" value="SUBMIT" />
 	</div>
 	<div class="footer">
 			<div class="col footer-item">
