@@ -3,7 +3,7 @@
 <body>
         <?php echo validation_errors(); ?>
 
-        <?php echo form_open('home'); ?>
+        <?php echo form_open('history'); ?>
             Do you have a physician? <br>
             <select name="hasphysician">
                 <option selected="true">Yes</option>
