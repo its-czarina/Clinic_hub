@@ -103,7 +103,7 @@ function popup(){
 
    var docHeight = $(document).height();
 
-   $("body").append("<div id='overlay' onclick='window.location.reload()'><div class='popup'><div class='date'>August 9, 2016</div><div class='checkup'>Dental Checkup</div><div class='doctor'>Dr. Marlou Lumapas</div></div></div>");
+   $("body").append("<div id='overlay' onclick='window.location.reload()'><div class='popup'><div class='date'>August 9, 2016</div><div class='checkup'>Dental Checkup</div><div class='doctor'><a href='https://www.google.com.ph/maps/place/Dr.+Marlou+Lumapas+Clinic/'>Dr. Marlou Lumapas</a></div></div></div>");
 
    $("#overlay")
       .height(docHeight)

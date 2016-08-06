@@ -1,85 +1,95 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
+?><html>
 <head>
-	<meta charset="utf-8">
-	<title>Welcome to ClinicAll!</title>
-
-	<style type="text/css">
-
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
-
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
-
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
+	<link rel="stylesheet" type="text/css" href="/xampp/htdocs/CAll/CodeIgniter-3.1.0/application/assets/styles/global.css">
 </head>
 <body>
+		<?php echo validation_errors(); ?>
 
-<div>
-	<h1>Welcome to ClinicAll!</h1>
+		<?php echo form_open('home'); ?>
+		<nav>
+			<div class="nav-container">
+				
+			</div>
+		</nav>
 
-	<div>
-		<a href="update_info">UPDATE YOUR MEDICAL INFORMATION</a><br>
-		<a href="schedule_checkup">SCHEDULE A CHECKUP</a><br>
-		<a href="search_doctor">SEARCH FOR A DOCTOR</a><br>
-		<a href="view_chart">VIEW YOUR CHART</a><br>
-		<a href="logout">LOGOUT</a><br>
+		<div class="hidden-container">
+			<div>
+				<div class="logo">
+					<img src="C:\Program Files\xampp\htdocs\xampp\htdocs\CAll\images\logo_y.png">
+				</div>
+				<div class="right-align nav-button">
+					<input type="submit" class="global-button animate btn" value="LOG-OUT" />
+				</div>
+			</div>
+		<form>
+		<div class="card">
+			<div class="card-title">
+				Services
+			</div>
+			<div class="card-content">
+				
+				<div class="row">
+					<div class="col leftmost">
+						<div class="general-button btn middle-center">
+							<div class="leftified">
+								<a href="update_info">UPDATE YOUR MEDICAL INFORMATION</a>
+							</div>
+							<div class="rightified">
+								<img class="button-icon" src="C:\Program Files\xampp\htdocs\xampp\htdocs\CAll\images\tablet.png">
+							</div>
+						</div>
+					</div>
+					<div class="col rightmost">
+						<div class="general-button btn middle-center">
+							<div class="leftified">
+								<a href="schedule_checkup">SCHEDULE A CHECKUP</a>
+							</div>
+							<div class="rightified">
+								<img class="button-icon" src="C:\Program Files\xampp\htdocs\xampp\htdocs\CAll\images\stethoscope.png">
+							</div>						
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="general-button btn middle-center">
+							<div class="leftified">
+								<a href="view_chart">VIEW YOUR CHART</a>
+							</div>
+							<div class="rightified">
+								<img class="button-icon" src="C:\Program Files\xampp\htdocs\xampp\htdocs\CAll\images\medical-history.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		</form>
 	</div>
-
-	
-</div>
-
+	<div class="footer">
+			<div class="col footer-item">
+				<div class="footer-title">
+					About
+				</div>
+				<div class="footer-content">
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+				</div>
+			</div>
+			<div class="col footer-item">
+				<div class="footer-title">
+					Contact
+				</div>
+				<div class="footer-content">
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<a>ClinicAll 2016</a>
+	</div>
 </body>
 </html>

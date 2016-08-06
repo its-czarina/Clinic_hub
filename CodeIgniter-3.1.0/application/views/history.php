@@ -3,20 +3,20 @@
 <body>
         <?php echo validation_errors(); ?>
 
-        <?php echo form_open('history'); ?>
+        <?php echo form_open('home/update_info'); ?>
             What is your blood type? <br>
-            <input type="text" name="bloodtype"><br>
+            <input type="text" value="<?php echo set_value('bloodtype') ?>" name="bloodtype"><br>
             Height in centimeters: <br>
-            <input type="text" name="height"><br>
+            <input type="text" value="<?php echo set_value('height') ?>" name="height"><br>
             Weight in kg: <br>
-            <input type="text" name="weight"><br>
+            <input type="text" value="<?php echo set_value('weight') ?>" name="weight"><br>
             Do you have a physician? <br>
             <select name="hasphysician">
                 <option selected="true">Yes</option>
                 <option selected="false">No</option>
             </select> <br>
             When was your last checkup? <br>
-            <input name="lastcheckup" type="date"> <br>
+            <input name="lastcheckup" value="<?php echo set_value('lastcheckup') ?>" type="date"> <br>
             Do you smoke? <br>
             <select name="doessmoke">
                 <option selected="true">Yes</option>
@@ -38,7 +38,7 @@
                 <option selected="false">No</option>
             </select> <br>
             If you are taking any medication, please list them here: <br>
-            <input name="medications" type="textarea"> <br>
+            <input name="medications" type="textarea" value="<?php echo set_value('medications') ?>"> <br>
             Have you ever had heart disease, high blood pressure, diabetes, kidney, hepatitis ABC, epilepsy?
             <select name="takingmedication">
                 <option selected="true">Yes</option>

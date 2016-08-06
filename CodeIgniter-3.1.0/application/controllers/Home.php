@@ -99,12 +99,7 @@ class Home extends CI_Controller{
         $this->load->library('form_validation');
         //field name, human name, rules
         $this->form_validation->set_rules('date','Date','required');
-        $this->form_validation->set_rules('address','Address','required');
-        $this->form_validation->set_rules('contactnum','Contact Number','required');
-        $this->form_validation->set_rules('email','E-mail Address','required');
-        $this->form_validation->set_rules('username','Username','required');
-        $this->form_validation->set_rules('password','Password','required');
-        $this->form_validation->set_rules('confpassword','Confirm Password','required');
+        $this->form_validation->set_rules('query','Query','required');
 
         if ($this->form_validation->run() == FALSE)
         {
@@ -124,39 +119,57 @@ class Home extends CI_Controller{
  
     public function update_info(){
             if (!is_null(get_cookie('user'))) {
-        
-            $this->load->library('form_validation');
-            //field name, human name, rules
-            $this->form_validation->set_rules('hasphysician','has physician','required');
-            $this->form_validation->set_rules('lastcheckup','last checkup','required');
-            $this->form_validation->set_rules('havehospitalized','have hospilazied','required');
+                $this->load->model('info');
+                $info = $this->info->get_info(get_cookie('user'));
+                if ($info === NULL){
+                    $this->load->library('form_validation');
+                    
+                    $this->form_validation->set_rules('hasphysician','has physician','required');
+                    $this->form_validation->set_rules('lastcheckup','last checkup','required');
+                    $this->form_validation->set_rules('havehospitalized','have hospilazied','required');
 
-            if ($this->form_validation->run() == FALSE)
-            {
-                $this->load->view('history');
+                    if ($this->form_validation->run() == FALSE)
+                    {
+                        $this->load->view('history');
+                    }
+                    else
+                    {
+                        $data = array(  
+                            'user_id' => get_cookie('user'),
+                            'bloodtype' => $this->input->post('bloodtype'),
+                            'height'=> $this->input->post('height'),
+                            'weight'=> $this->input->post('weight'),
+                            'hasphysician' => $this->input->post('hasphysician'),
+                            'lastcheckup'=> $this->input->post('lastcheckup'),
+                            'doessmoke'=> $this->input->post('doessmoke'),
+                            'havehospitalized'=> $this->input->post('havehospitalized'),
+                            'hasreaction'=> $this->input->post('hasreactions'),
+                            'takingmedication'=> $this->input->post('takingmedication'),
+                            'medications' => $this->input->post('medications'),
+                            'chestpains'=> $this->input->post('haveexperienced'),
+                            'injurysurgery'=> $this->input->post('haveinjuries'),
+                        );
+                        $this->db->insert('information', $data);
+                        redirect('home/');
+                    }
+                }
+                else
+                {
+                    $this->load->view('med-info', $info);
+                }
             }
-            else
-            {
-                $data = array(  
-                    'hasphysician' => $this->input->post('hasphysician'),
-                    'lastcheckup'=> $this->input->post('lastcheckup'),
-                    'doessmoke'=> $this->input->post('doessmoke'),
-                    'havehospitalized'=> $this->input->post('havehospitalized'),
-                    'hasreactions'=> $this->input->post('hasreactions'),
-                    'takingmedication'=> $this->input->post('takingmedication'),
-                    'chestpains'=> $this->input->post('chestpains'),
-                    'injurysurgery'=> $this->input->post('injurysurgery'),
-                );
-
-                $this->db->insert('login', $data);
-                $this->load->view('login');
-            }
-        }
         else {
             redirect('home/login');
         }
     }
 
+    public function view_calendar(){
+        $this->load->view('calendar');
+    }
+
+    public function view_chart($id = NULL){
+        $this->load->view('information');
+    }
 
 
 
