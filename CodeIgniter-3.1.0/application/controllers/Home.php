@@ -43,6 +43,17 @@ class Home extends CI_Controller{
         }
     }
 
+    public function logout(){
+        $cookie = array(
+            'name'   => 'user',
+            'value'  => NULL,
+            'path'   => '/',
+        );
+        $this->input->set_cookie($cookie);   
+        delete_cookie($cookie);
+        redirect('home');
+    }
+
     public function login(){
 
         $this->load->helper(array('form', 'url'));
@@ -61,7 +72,8 @@ class Home extends CI_Controller{
 
             $user = $this->input->post('username');
             $pass = $this->input->post('password');
-            $user_id = $this->authenticate_login($user, $pass);
+            $this->load->model('login');
+            $user_id = $this->login->authenticate_user($user, $pass);
             if ($user_id !== NULL){
                 $cookie = array(
                     'name'   => 'user',
@@ -77,12 +89,12 @@ class Home extends CI_Controller{
 
 	}
 
- 
-    private function authenticate_login($user, $pass){
-        $this->load->model('login');
-        $is_authenticated = $this->login->authenticate_user($user, $pass);
-        return $is_authenticated;
+    public function search_doctor(){
+        $this->load->view('search');
     }
+ 
+
+
 
 }
 
