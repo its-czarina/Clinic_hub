@@ -5,8 +5,15 @@
 	<title>Calendar Widget</title>
 	<link rel="stylesheet" type="text/css" href="/xampp/htdocs/CAll/CodeIgniter-3.1.0/application/assets/styles/calendar.css">
 
-</head>
+</head>x
 <body>
+	<nav>
+		<div class="nav-container">
+			
+		</div>
+	</nav>
+
+	<div class="card">
 	<div id="cal">
 		<div class="header">
 			<span class="left button" id="prev"> &lang; </span>
@@ -34,6 +41,7 @@
 			</table>
 		</div>
 	</div>
+	</div>
 	
 </body>
 	<script src="/xampp/htdocs/CAll/CodeIgniter-3.1.0/application/assets/scripts/jquery-1.11.3.js"></script>
@@ -44,4 +52,5 @@
 	cal.init();
 	</script>
 </body>
+
 </html>

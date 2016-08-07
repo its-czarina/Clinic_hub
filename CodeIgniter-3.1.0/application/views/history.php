@@ -15,9 +15,11 @@
         <div class="hidden-container">
         <div>
             <div class="logo">
-                <img src="C:\Program Files\xampp\htdocs\xampp\htdocs\CAll\images\logo_y.png">
+                <img src="\xampp\htdocs\CAll\images\logo_y.png">
             </div>
-            
+            <div class="right-align nav-button">
+                <input type="submit" class="global-button animate btn" value="LOG-OUT" />
+            </div>
         </div>
 
         <div class="card">
@@ -109,10 +111,35 @@
                     </div>
             </div>
         </div>
-
-        <div class="right-align">
-            <input type="submit" class="global-button animate btn" value="SUBMIT" />
-        </div>
         </form>
+        </div>
+            <div class="right-align">
+                <input type="submit" class="global-button animate btn" value="SUBMIT" />
+            </div>
+        </div>
+    <div class="footer">
+            <div class="col footer-item">
+                <div class="footer-title">
+                    About
+                </div>
+                <div class="footer-content">
+                    
+                </div>
+            </div>
+
+                <div class="col footer-item">
+                <div class="footer-title">
+                    Credits
+                </div>
+                <div class="footer-content">
+                    <a>Header photo "Long Love" by Sarawut Intarob</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <a>ClinicAll 2016</a>
+        Abella, Cahutay, Fernandez, Salvacion
+    </div>
 </body>
 </html>

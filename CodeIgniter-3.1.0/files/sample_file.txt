@@ -1,0 +1,6 @@
+This is a sample record of the findings of a doctor:
+
+Timestamp: 03-04-01
+Findings:
+
+Breathing ok. Administered flu vaccine. Come back in 2 days for booster shot.

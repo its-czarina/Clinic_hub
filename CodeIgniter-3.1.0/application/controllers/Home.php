@@ -171,7 +171,23 @@ class Home extends CI_Controller{
         $this->load->view('information');
     }
 
+    public function download_record(){
+        $yourFile = "files/sample_file.txt";
+        $file = @fopen($yourFile, "rb");
 
+        header('Content-Description: File Transfer');
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename=FeDelMundo_Trial.txt');
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+        header('Content-Length: ' . filesize($yourFile));
+        while (!feof($file)) {
+            print(@fread($file, 1024 * 8));
+            ob_flush();
+            flush();
+        }
+    }
 
 
 

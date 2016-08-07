@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../assets/styles/global.css">
+    <link rel="stylesheet" type="text/css" href="/xampp/htdocs/CAll/CodeIgniter-3.1.0/application/assets/styles/global.css">
 </head>
 <body>
         <?php echo validation_errors(); ?>
@@ -15,7 +15,7 @@
         <div class="hidden-container">
             <div>
                 <div class="logo">
-                    <img src="C:\Program Files\xampp\htdocs\xampp\htdocs\CAll\images\logo_y.png">
+                    <img src="\xampp\htdocs\CAll\images\logo_y.png">
                 </div>
                 <div class="right-align nav-button">
                     <input type="submit" class="global-button animate btn" value="LOG-OUT" />
@@ -58,7 +58,7 @@
                                 <input type="text" id="search">
                             </div>
                             <div class="rightified absolute">
-                                <img src="C:\Program Files\xampp\htdocs\xampp\htdocs\CAll\images\magnifying-glass.png" class="search-icon" onclick="document.getElementById('search').value='Heavenly Librando'">
+                                <img src="\xampp\htdocs\CAll\images\magnifying-glass.png" class="search-icon" onclick="document.getElementById('search').value='Heavenly Librando'">
                             </div>
                         </div>
             
@@ -78,21 +78,23 @@
                     About
                 </div>
                 <div class="footer-content">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    
                 </div>
             </div>
-            <div class="col footer-item">
+
+                <div class="col footer-item">
                 <div class="footer-title">
-                    Contact
+                    Credits
                 </div>
                 <div class="footer-content">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    <a>Header photo "Long Love" by Sarawut Intarob</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="copyright">
         <a>ClinicAll 2016</a>
+        Abella, Cahutay, Fernandez, Salvacion
     </div>
 </body>
 </html>

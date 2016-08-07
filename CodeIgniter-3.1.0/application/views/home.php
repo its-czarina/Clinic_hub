@@ -15,7 +15,7 @@
 		<div class="hidden-container">
 			<div>
 				<div class="logo">
-					<img src="C:\Program Files\xampp\htdocs\xampp\htdocs\CAll\images\logo_y.png">
+					<img src="\xampp\htdocs\CAll\images\logo_y.png">
 				</div>
 				
 			</div>
@@ -71,10 +71,11 @@
 		</div>
 		
 		</form>
-	</div>
-	<div class="right-align">
+			<div class="right-align">
 		<input type="submit" class="global-button animate btn" value="SUBMIT" />
 	</div>
+	</div>
+
 	<div class="footer">
 			<div class="col footer-item">
 				<div class="footer-title">
