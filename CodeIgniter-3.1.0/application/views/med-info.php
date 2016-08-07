@@ -12,7 +12,7 @@
         <div class="hidden-container">
             <div>
                 <div class="logo">
-                    <img src="\xampp\htdocs\CAll\images\logo_y.png">
+                    <a href="home"><img src="\xampp\htdocs\CAll\images\logo_y.png"></a>
                 </div>
                 <div class="right-align nav-button">
                     <input type="submit" class="global-button animate btn" value="LOG-OUT" />
@@ -85,6 +85,29 @@
 Have you experienced any chest pains, dizzines or fainting? <?=$chestpains?><br>
 Have you had any injury, surgery, or radiation to the face or jaws? <?=$injurysurgery?><br>
  -->
+    <div class="footer">
+            <div class="col footer-item">
+                <div class="footer-title">
+                    About
+                </div>
+                <div class="footer-content">
+                    
+                </div>
+            </div>
 
+                <div class="col footer-item">
+                <div class="footer-title">
+                    Credits
+                </div>
+                <div class="footer-content">
+                    <a>Header photo "Long Love" by Sarawut Intarob</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <a>ClinicAll 2016</a>
+        Abella, Cahutay, Fernandez, Salvacion
+    </div>
 
 </html>
