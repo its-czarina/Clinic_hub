@@ -7,7 +7,9 @@ class Home extends CI_Controller{
         $this->load->helper('cookie');
         $this->load->helper(array('form', 'url'));
     }
-
+    public function calendar(){
+        $this->load->view('calendarUI');
+    }
 	public function index(){
         if (is_null(get_cookie('user'))) {
         
@@ -34,7 +36,7 @@ class Home extends CI_Controller{
     			);
 
     			$this->db->insert('login', $data);
-                $this->load->view('login');
+                redirect('home/login');
             }
         }
         else {
@@ -164,7 +166,7 @@ class Home extends CI_Controller{
     }
 
     public function view_calendar(){
-        $this->load->view('calendar');
+        $this->load->view('calendarUI');
     }
 
     public function view_chart($id = NULL){

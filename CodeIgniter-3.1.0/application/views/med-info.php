@@ -15,7 +15,7 @@
                     <a href="home"><img src="\xampp\htdocs\CAll\images\logo_y.png"></a>
                 </div>
                 <div class="right-align nav-button">
-                    <input type="submit" class="global-button animate btn" value="LOG-OUT" />
+                    <input type="button" class="global-button animate btn" value="LOG-OUT" onclick="location.href='logout';"/>
                 </div>
             </div>
         <form>

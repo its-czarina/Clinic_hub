@@ -15,10 +15,13 @@
         <div class="hidden-container">
             <div>
                 <div class="logo">
-                    <img src="\xampp\htdocs\CAll\images\logo_y.png">
+                    <img src="\xampp\htdocs\CAll\images\logo_y.png" onclick="location.href='home'">
                 </div>
                 <div class="right-align nav-button">
-                    <input type="submit" class="global-button animate btn" value="LOG-OUT" />
+                    <input type="button" class="global-button animate btn" value="LOG-OUT" onclick="location.href='logout';"/>
+                </div>
+                <div class="right-align nav-button">
+                    <input type="button" class="global-button animate btn" value="HOME" onclick="location.href='./';"/>
                 </div>
             </div>
         <form>

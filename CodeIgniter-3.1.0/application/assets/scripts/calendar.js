@@ -103,7 +103,7 @@ function popup(){
 
    var docHeight = $(document).height();
 
-   $("body").append("<div id='overlay' onclick='window.location.reload()'><div class='popup'><div class='date'>August 9, 2016</div><div class='checkup'>Dental Checkup</div><div class='doctor'>Dr. Marlou Lumapas<iframe class='map' frameborder='0' src='https://www.google.com/maps/embed/v1/search?key=AIzaSyAo5z_MhZ-VaQgwGhmiggLR2qVV3KkXXXk&q=Dr+Marlou+Lumapas+Clinic' allowfullscreen></iframe></div></div></div>");
+   $("body").append("<div id='overlay' onclick='window.location.reload()'><center><div class='popup'><div class='strong-text'>August 9, 2016</div><iframe class='map' frameborder='0' src='https://www.google.com/maps/embed/v1/search?key=AIzaSyAo5z_MhZ-VaQgwGhmiggLR2qVV3KkXXXk&q=Dr+Marlou+Lumapas+Clinic' allowfullscreen></iframe><label class='l'>Dental Checkup</label><br><label class='l'>Dr. Marlou Lumapas</label></div></div></center></div>");
 
    $("#overlay")
       .height(docHeight)
@@ -116,13 +116,13 @@ function popup(){
          'z-index': 10,
       });
     $(".popup")
- 		.height('70%')
+ 		.height('400px')
  		.css({
  			'position': 'relative',
+ 			'padding':'20px',
          	'top': docHeight*0.15,
-         	'left': 1366*0.28,
 	        'background-color': 'rgba(255,255,255,1)',
-	        'width': '30%',
+	        'width': '45%',
 	        'z-index': 11,
 	        'margin':'0px',
 	        'font-size': '16px',
@@ -131,8 +131,8 @@ function popup(){
     		'text-align': 'center',
     		'vertical-align': 'middle',
       });
- 	$(".date")
+ 	$(".l")
  		.css({
- 			
+ 			'margin':'10px'
  		});
 };

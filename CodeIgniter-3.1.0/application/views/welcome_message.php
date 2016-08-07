@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<img src="\xampp\htdocs\CAll\images\logo_y.png">
 				</div>
 				<div class="right-align nav-button">
-					<input type="submit" class="global-button animate btn" value="LOG-OUT" />
+					<input type="button" class="global-button animate btn" value="LOG-OUT" onclick="location.href='logout';"/>
 				</div>
 			</div>
 		<form>

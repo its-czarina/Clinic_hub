@@ -15,7 +15,7 @@
 		<div class="hidden-container">
 			<div>
 				<div class="logo">
-					<img src="\xampp\htdocs\CAll\images\logo_y.png">
+					<a href="home"><img src="\xampp\htdocs\CAll\images\logo_y.png"></a>
 				</div>
 				<div class="right-align nav-button">
                     <input type="button" class="global-button animate btn" value="SIGN UP" onclick="location.href='./'"/>
